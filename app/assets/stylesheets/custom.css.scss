@@ -1,5 +1,10 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+body {
+  width: 100%;
+  margin: auto;
+}
+
 .navbar {
   padding-left: 40px;
   padding-right: 40px;
@@ -13,21 +18,77 @@
 
 .main-img {
   min-height: 70vh;
-  background-color: blue;
+  background-image: url(premier.jpg);
+}
+
+.main-left {
+  position: absolute;
+  top: 550px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.main-left a {
+  color: #ED5E36;
 }
 
 .the-articles {
   min-height: 250px;
 }
 
+.main-img,
 .first-col,
-.third-col {
-  background-color: red;
+.second-col,
+.third-col,
+.fourth-col {
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.second-col,
+.first-col {
+  background-image: url(laliga.jpg);
+}
+
+.second-col {
+  background-image: url(seria_a.jpg);
+}
+
+.third-col {
+  background-image: url(bundasliga.jpg);
+}
+
 .fourth-col {
-  background-color: #white;
+  background-image: url(others.gif);
+}
+
+.left-bottom-main {
+  position: absolute;
+  top: 580px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.left-top {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.left-bottom {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.left-bottom-main a,
+.left-top a,
+.left-bottom a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer {
@@ -46,4 +107,12 @@
 .footer ul {
   float: right;
   list-style-type: none;
+}
+
+.footer ul li {
+  padding-left: 5px;
+}
+
+.fa {
+  color: #ED5E36;
 }
