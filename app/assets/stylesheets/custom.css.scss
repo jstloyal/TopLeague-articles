@@ -91,9 +91,17 @@ body {
   text-decoration: none;
 }
 
+.push {
+  height: 60px;
+}
+
 .footer {
-  margin-top: 25px;
-  padding-top: 5px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  margin-top: 35px;
+  padding-top: 10px;
   border-top: 1px solid #eaeaea;
   color: #777;
   padding-left: 40px;
