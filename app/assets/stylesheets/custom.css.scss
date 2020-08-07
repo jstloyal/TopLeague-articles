@@ -1,0 +1,49 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  letter-spacing: -1px;
+  padding-right: 80px;
+}
+
+.main-img {
+  min-height: 70vh;
+  background-color: blue;
+}
+
+.the-articles {
+  min-height: 250px;
+}
+
+.first-col,
+.third-col {
+  background-color: red;
+}
+
+.second-col,
+.fourth-col {
+  background-color: #white;
+}
+
+.footer {
+  margin-top: 25px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.footer small {
+  float: left;
+}
+
+.footer ul {
+  float: right;
+  list-style-type: none;
+}
