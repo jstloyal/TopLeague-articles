@@ -95,6 +95,21 @@ body {
   height: 60px;
 }
 
+.text-link {
+  color: #ED5E36;
+  font-weight: bold;
+}
+
+.article-body {
+  margin-top: 50px;
+}
+
+.article-img {
+  object-fit: cover;
+  height: 60vh;
+  width: 840px;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
@@ -102,7 +117,7 @@ body {
   background: #fff;
   margin-top: 35px;
   padding-top: 10px;
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #ED5E36;
   color: #777;
   padding-left: 40px;
   padding-right: 40px;
