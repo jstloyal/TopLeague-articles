@@ -114,13 +114,15 @@ body {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: #fff;
   margin-top: 35px;
   padding-top: 10px;
   border-top: 1px solid #ED5E36;
+  background-color: #4e443f;
   color: #777;
   padding-left: 40px;
   padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer small {

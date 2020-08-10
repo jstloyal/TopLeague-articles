@@ -4,13 +4,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(name: params[:session][:name].downcase)
-    if user
+    user = User.find_by(name: params[:sessions][:name])
+    if user.present?
       session[:user_id] = user.id
       flash[:notice] = 'You have successfully logged in'
-      redirect_to articles_path
+      redirect_to root_path
     else
-      flash.now[:alert] = 'There was something wrong with your login information'
+      flash.now[:alert] = 'Signup before you login'
       render 'new'
     end
   end

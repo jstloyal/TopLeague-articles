@@ -8,7 +8,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(article_params)
+    @article = current_user.article.build(article_params)
     if @article.save
       flash[:notice] = "Article was successfully created!"
       redirect_to article_path(@article)
@@ -21,6 +21,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image )
+    params.require(:article).permit(:title, :text, :image, category_ids: [] )
   end
 end

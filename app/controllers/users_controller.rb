@@ -4,12 +4,13 @@ class UsersController < ApplicationController
   end
 
   def create
+    # byebug
     @user = User.new(user_params)
     if @user.save
-      flash[:notice] = "User created successfully!"
+      flash[:notice] = "User created successfully! Welcome #{@user.name}"
       redirect_to root_path
     else
-      flash[:alert] = "Error! User not created please try another name."
+      flash.now[:alert] = "Error! User not created please try another name."
       render 'new'
     end
   end

@@ -23,7 +23,7 @@
           <a class="nav-link" href="#">BUNDESLIGA</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">OTHERS</a>
+          <%= link_to 'CREATE ARTICLE', new_article_path, class: 'nav-link' %>
         </li>
       <% end %>
     </ul>
@@ -38,7 +38,7 @@
           <%= link_to 'REGISTER', signup_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Login</a>
+          <%= link_to 'LOGIN', login_path, class: 'nav-link' %>
         </li>
       <% end %>
     </ul>
