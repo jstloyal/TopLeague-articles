@@ -6,32 +6,41 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">PREMIER LEAGUE <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">SERIA A</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">LA LIGA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">BUNDESLIGA</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">OTHERS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">OPINION</a>
-      </li>
+      <% if logged_in? %>
+        <li class="nav-item active">
+          <%= link_to 'HOME', root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PREMIER LEAGUE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">SERIA A</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">LA LIGA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">BUNDESLIGA</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">OTHERS</a>
+        </li>
+      <% end %>
     </ul>
+
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item user-name">
-        <a class="nav-link">Register</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">Login</a>
-      </li>
+      <% if logged_in? %>
+        <li class="nav-item user-name">
+          <%= link_to 'LOGOUT', logout_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li class="nav-item user-name">
+          <%= link_to 'REGISTER', signup_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">Login</a>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>
