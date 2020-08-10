@@ -25,6 +25,11 @@
         <li class="nav-item">
           <%= link_to 'CREATE ARTICLE', new_article_path, class: 'nav-link' %>
         </li>
+        <% if logged_in? && current_user.admin? %>
+          <li class="nav-item">
+            <%= link_to 'CREATE NEW CATEGORY', new_category_path, class: 'nav-link' %>
+          </li>
+        <% end %>
       <% end %>
     </ul>
 

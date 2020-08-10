@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-body">
+          <%= form_with(model: @category, local: true) do |f| %>
+            <div class="form-group row">
+              <%= f.label :name, class: "col-2 col-form-label" %>
+                <div class="col-10">
+                  <%= f.text_field :name, class: "form-control", placeholder: "Category name" %>
+                </div>
+            </div>
+            <div class="form-group row">
+              <%= f.label :priority, class: "col-2 col-form-label" %>
+                <div class="col-10">
+                  <%= f.text_field :priority, class: "form-control", placeholder: "Enter between 1 - 5" %>
+                </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+              <%= f.submit class: "btn btn-outline-dark btn-lg text-link" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <%= image_tag("soccer.jpg", class: 'article-img') %>
+      </div>
+    </div>
+  </div>
+</div>

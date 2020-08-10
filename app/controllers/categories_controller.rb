@@ -1,6 +1,9 @@
 class CategoriesController < ApplicationController
+  before_action :require_admin, except: %i[index show]
+  before_action :require_user, only: [:show]
+
   def index
-    @categories = Category.all
+    @liked_article = Article.highest_vote.first
   end
 
   def new
@@ -11,7 +14,7 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     if @category.save
       flash[:notice] = 'Category was successfully created'
-      redirect_to categories_path
+      redirect_to root_path
     else
       flash.now[:alert] = 'Error! Category not created, enter a valid name'
       render 'new'
@@ -41,5 +44,11 @@ class CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit(:name)
+  end
+
+  def require_admin
+    reuturn unless !logged_in? || !current_user.admin?
+    flash[:alert] = "Only admins can perform this action"
+    redirect_to root_path
   end
 end
