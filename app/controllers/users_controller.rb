@@ -6,13 +6,30 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    # show
+  end
+
+  def edit
+    # edit
+  end
+
+  def update
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      render 'edit'
+    end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "User created successfully! Welcome #{@user.name}"
-      redirect_to root_path
+      # log_in @user
+      redirect_to user_path(@user)
     else
-      flash.now[:alert] = "Error! User not created please try another name."
+      flash.now[:alert] = 'Error! User not created please try another name.'
       render 'new'
     end
   end

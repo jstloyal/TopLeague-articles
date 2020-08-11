@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :require_admin, except: %i[index show]
-  before_action :require_user, only: [:show]
+  # before_action :require_user, only: [:show]
 
   def index
     @liked_article = Article.highest_vote.first

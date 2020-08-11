@@ -1,10 +1,12 @@
 <div class="container" align="center">
   <div class="col-8">
-    <div class="article-image">
-      <%= image_tag @article.image.url, class: 'image-art' %>
-    </div>
+    <!-- <div class="article-image">
+      <%# <%= image_tag @article.image.url, class: 'image-art' %> %>
+    </div> -->
     <h2 class='text-center my-title'><%= @article.title %></h2>
     <p class='text-center'><%= @article.text %></p>
     <span class='font-weight-bold'>Author: <%=link_to @article.author.name, user_path(@article.author) %></span>
+    <span><%= pluralize(@article.votes.count, 'Vote') %></span>
+    <%= upvote_or_downvote_btn(@article) %>
   </div>
 </div>
