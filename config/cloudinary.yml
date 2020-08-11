@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: jstloyalty
+  api_key: '215137213218272'
+  api_secret: MG7-E4RLlt72QO04gIqOJ1GCi78
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: jstloyalty
+  api_key: '215137213218272'
+  api_secret: MG7-E4RLlt72QO04gIqOJ1GCi78
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: jstloyalty
+  api_key: '215137213218272'
+  api_secret: MG7-E4RLlt72QO04gIqOJ1GCi78
+  enhance_image_tag: true
+  static_file_support: false

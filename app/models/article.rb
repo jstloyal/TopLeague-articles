@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   has_many :votes
   has_many :voters, through: :votes
   has_many :users_vote, through: :votes, source: :user
-  # mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
 
   scope :ordered_by_most_recent, -> { order(created_at: :desc) }
   scope :highest_vote, -> { order(votes_count: :desc) }
