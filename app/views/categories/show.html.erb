@@ -1,0 +1,17 @@
+<div class="articles">
+  <% @category_articles.each do |article| %>
+    <div class="article">
+      <div class="reverse">
+        <%= image_tag(article.image.url, class: 'article-img element') %>
+      </div>
+      <div class="card-body">
+        <h5><%= @category.name %></h5>
+        <h5 class='card-text font-weight bold'><%= article.title %></h5>
+        <p class='card-text'><%= truncate(article.text, length: 60) %></p>
+        <%= pluralize(article.votes.count, 'Vote') %>
+        <%= upvote_or_downvote_btn(article) %>
+        <p><%= link_to 'Read more', article_path(article) %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

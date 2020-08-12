@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   def update
     @category = Category.find(params[:id])
     if @category.update(category_params)
-      flash[:notice] = "Category name successfully updated!"
+      flash[:notice] = 'Category name successfully updated!'
       redirect_to category_path(@category)
     else
       render 'edit'
@@ -48,7 +48,8 @@ class CategoriesController < ApplicationController
 
   def require_admin
     return unless !logged_in? || !current_user.admin?
-    flash[:alert] = "Only admins can perform this action"
+
+    flash[:alert] = 'Only admins can perform this action'
     redirect_to root_path
   end
 end

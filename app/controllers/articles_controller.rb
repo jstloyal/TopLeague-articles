@@ -11,10 +11,10 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     @article.author_id = current_user.id
     if @article.save
-      flash[:notice] = "Article was successfully created!"
+      flash[:notice] = 'Article was successfully created!'
       redirect_to root_path
     else
-      flash[:alert] = "An error occured"
+      flash[:alert] = 'An error occured'
       render 'new'
     end
   end
@@ -22,6 +22,6 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :text, :image, category_ids: [] )
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end
