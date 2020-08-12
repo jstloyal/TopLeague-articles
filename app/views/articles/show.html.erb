@@ -1,7 +1,9 @@
 <div class='container-fuid article-body1' align='center'>
   <div class="col-8">
     <div class="card" style="width: 400px;">
-      <%= image_tag @article.image.url, class: 'card-img-top image-art' %>
+      <% if @article.image.url %>
+        <%= image_tag(@article.image.url, class: 'card-img-top image-art') %>
+      <% end %>
       <div class="card-body">
         <h3 class='card-title text-center my-title'><%= @article.title %></h3>
         <p class='card-text text-center'><%= @article.text %></p>

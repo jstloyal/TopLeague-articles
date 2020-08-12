@@ -5,6 +5,10 @@ body {
   margin: auto;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .navbar {
   padding-left: 40px;
   padding-right: 40px;
@@ -108,10 +112,14 @@ body {
 }
 
 .article-body1 {
-  background-image: url(bundasliga.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  // background-image: url(bundasliga.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
   height: 87vh;
+  // -webkit-filter: grayscale(100%);
+  // filter: grayscale(100%);
+  background-color: #4e443f;
+  opacity: 50%;
 }
 
 .form-body {
