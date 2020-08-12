@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :require_same_user, only: %i[edit update show]
   before_action :require_admin, only: [:destroy]
+  before_action :find_user, only: %i[edit update show]
 
   def new
     @user = User.new
@@ -44,6 +45,10 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name)
+  end
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
   def require_same_user
