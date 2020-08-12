@@ -8,20 +8,12 @@
     <ul class="navbar-nav mr-auto">
       <% if logged_in? %>
         <li class="nav-item active">
-          <%= link_to 'HOME', root_path, class: "nav-link" %>
+          <%= link_to 'HOME', root_path, class: "nav-link font-weight-bold" %>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">PREMIER LEAGUE</a>
+          <%= render 'layouts/categories' %>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">SERIA A</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">LA LIGA</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">BUNDESLIGA</a>
-        </li>
+
         <li class="nav-item">
           <%= link_to 'CREATE ARTICLE', new_article_path, class: 'nav-link' %>
         </li>

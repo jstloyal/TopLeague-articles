@@ -1,9 +1,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-sm-12">
-      <% if @liked_article.image.url %>
-        <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'img') %>
-      <% end %>
+      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'img') %>
       <div class="left-bottom-main">
         <h5 id='current' class='font-weight-bold'><%= @liked_article.title ? @liked_article.title : '' %></h5>
         <p class= 'text-white font-weight-bold ml-3'><%= @liked_article.text ? @liked_article.text : '' %></p>
@@ -19,9 +17,7 @@
         <% subcategories = category.ordered_by_most_recent.first %>
         <div class="col-md-3">
           <div class="element">
-            <% if subcategories %>
-              <%= image_tag(subcategories.present? ? subcategories.image.url : '', class: 'image element') %>
-            <% end %>
+            <%= image_tag(subcategories.present? ? subcategories.image.url : '', class: 'image element') %>
           </div>
           <%= link_to category_path(category.id) do %>
             <div class="left-top">

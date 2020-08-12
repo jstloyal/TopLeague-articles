@@ -3,7 +3,9 @@ class CategoriesController < ApplicationController
   # before_action :require_user, only: [:show]
 
   def index
-    @liked_article = Article.highest_vote.first
+    @categories = Category.all
+    # @liked_article = Article.highest_vote.first
+    @liked_article = Article.all
   end
 
   def new
