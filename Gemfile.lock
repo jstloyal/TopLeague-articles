@@ -50,6 +50,7 @@ GEM
       activejob (= 6.0.3.2)
       activerecord (= 6.0.3.2)
       marcel (~> 0.3.1)
+    activestorage-cloudinary-service (0.2.3)
     activesupport (6.0.3.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
@@ -316,6 +317,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage-cloudinary-service
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   byebug

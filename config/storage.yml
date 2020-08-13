@@ -15,9 +15,10 @@ local:
 #   bucket: your_own_bucket
 
 cloudinary:
-  service: cloudinary
-  api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
-  api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
+  service: Cloudinary
+  # cloud_name: <%= Rails.application.credentials.dig(:cloudinary, :cloud_name) %>
+  # api_key: <%= Rails.application.credentials.dig(:cloudinary, :api_key) %>
+  # api_secret: <%= Rails.application.credentials.dig(:cloudinary, :api_secret) %>
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:

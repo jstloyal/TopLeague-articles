@@ -1,16 +1,12 @@
-<div class='container-fuid article-body1' align='center'>
-  <div class="col-8">
-    <div class="card" style="width: 400px;">
-      <% if @article.image.url %>
-        <%= image_tag(@article.image.url, class: 'card-img-top image-art') %>
-      <% end %>
-      <div class="card-body">
-        <h3 class='card-title text-center my-title'><%= @article.title %></h3>
-        <p class='card-text text-center'><%= @article.text %></p>
-        <span class='font-weight-bold'>Author: <%=link_to @article.author.name, user_path(@article.author) %></span>
-        <span><%= pluralize(@article.votes.count, 'Vote') %></span>
-        <%= upvote_or_downvote_btn(@article) %>
-      </div>
+<div class='container mt-2' align='center'>
+    <div class="img-article">
+      <%= image_tag @article.image.url, class: 'element-show image-art' %>
     </div>
-  </div>
+    <h2 class='font-weight-bold text-center'><%= @article.title %></h2>
+    <p class='text-center neon font-weight-bold'><%= @article.text %></p>
+    <div align='center'>
+      <span class='font-weight-bold'>Author: <%=link_to @article.author.name, user_path(@article.author) %></span>
+      <span><%= pluralize(@article.votes.count, 'Vote') %></span>
+      <%= upvote_or_downvote_btn(@article) %>
+    </div>
 </div>
