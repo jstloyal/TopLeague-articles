@@ -1,11 +1,10 @@
 class CategoriesController < ApplicationController
-  before_action :require_admin, except: %i[index show]
+  before_action :require_admin, only: %i[create new edit]
   # before_action :require_user, only: [:show]
 
   def index
-    # @categories = Category.all
-    # @liked_article = Article.highest_vote.first
-    @liked_article = Article.all
+    @categories = Category.all
+    @liked_article = Article.highest_vote.first
   end
 
   def new

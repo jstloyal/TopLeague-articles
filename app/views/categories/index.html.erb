@@ -1,30 +1,30 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'img') %>
-      <div class="left-bottom-main">
-        <h5 id='current' class='font-weight-bold'><%= @liked_article.title ? @liked_article.title : '' %></h5>
-        <p class= 'text-white font-weight-bold ml-3'><%= @liked_article.text ? @liked_article.text : '' %></p>
+  <div class="row ">
+    <div class="container-fluid cat-index">
+      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'main-img1') %>
+      <div class="">
+        <h5 id='current' class='main-left'><%= @liked_article.title ? @liked_article.title : '' %></h5>
+        <p class= 'left-bottom-main'><%= truncate(@liked_article.text ? @liked_article.text : '', length: 80) %></p>
       </div>
     </div>
   </div>
 </div>
 
 <div class="my-portfolio">
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container-fluid cat-index">
+    <div class="row this-articles">
       <% Category.includes(:ordered_by_most_recent).each do |category| %>
         <% subcategories = category.ordered_by_most_recent.first %>
-        <div class="col-md-3">
-          <div class="element">
-            <%= image_tag(subcategories.present? ? subcategories.image.url : '', class: 'image element') %>
+        <div class="col-sm-3 down-column no-gutters">
+          <div class="my-column">
+            <%= image_tag(subcategories.present? ? subcategories.image.url : '', class: 'my-column') %>
           </div>
           <%= link_to category_path(category.id) do %>
-            <div class="left-top">
-              <h5><%= category.name %></h5>
+            <div class="">
+              <h5 class="left-top"><%= category.name %></h5>
             </div>
-            <div class="left-bottom">
-              <p><%= subcategories.present? ? subcategories.title : '' %></p>
+            <div class="">
+              <p class="left-bottom"><%= truncate(subcategories.present? ? subcategories.title : '', length: 30) %></p>
             </div>
           <% end %>
         </div>

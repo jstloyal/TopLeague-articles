@@ -82,4 +82,5 @@ ActiveRecord::Schema.define(version: 2020_08_11_123656) do
   add_foreign_key "article_categories", "articles"
   add_foreign_key "article_categories", "categories"
   add_foreign_key "votes", "articles"
+  add_foreign_key "votes", "users"
 end
