@@ -6,8 +6,6 @@ RSpec.describe Article, type: :model do
   describe 'Validations' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:text) }
-    it { should validate_presence_of(:image) }
-    # it { should validate_presence_of(:title) }
   end
 
   describe 'Associations' do
