@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "User created successfully! Welcome #{@user.name}"
-      # log_in @user
       redirect_to user_path(@user)
     else
       flash.now[:alert] = 'Error! User not created please try another name.'
