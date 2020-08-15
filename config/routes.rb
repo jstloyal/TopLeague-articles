@@ -7,11 +7,11 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new', as: 'signup'
   post 'signup', to: 'users#create'
-  resources :users
+  resources :users, except: [:edit, :show]
 
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
 
-  resources :categories
+  resources :categories, except: [:destroy]
 end
