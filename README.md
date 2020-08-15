@@ -1,6 +1,7 @@
 # TopeLeague
 
 toPEleague is a football blog app where you get to write articles on the top four leagues in Europe which are English Premier League, La Liga, Seria A, and Bundesliga. The home page shows all the articles and the top part of the page feature the article with the highest votes. Each article when clicked comprises a "read more" link as well as an option where users can upvote or downvote any article as they so wish.
+
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -27,9 +28,6 @@ toPEleague is a football blog app where you get to write articles on the top fou
   <p align="center">
     This project is part of the Microverse curriculum in Ruby on Rails module!
     <br />
-    <a href="https://github.com/jstloyal/TopLeague-articles">
-      <img src="app/assets/images/ror-social.png" alt="Microverse Logo" width="1000" height="400">
-    </a><br />
     <a href="https://github.com/jstloyal/TopLeague-articles"><strong>Explore the docs »</strong></a>
     <br />
     <br />
@@ -50,32 +48,37 @@ toPEleague is a football blog app where you get to write articles on the top fou
 
 ## features
 
-  -  An Homepage with the article with the highest category which appear before recent articles based on their categories.
-  -  A all article show page with a read more link and an option where user can vote for their favorite article
-  -  Individual article show page where you get to read more about the article and also see the author name.
-  -  Users authentication is by their names.
+- An Homepage with the article with the highest category which appear before recent articles based on their categories.
+- A all article show page with a read more link and an option where user can vote for their favorite article
+- Individual article show page where you get to read more about the article and also see the author name.
+- Users authentication is by their names.
 
 ## HOMEPAGE
+
 <a href="https://github.com/jstloyal/TopLeague-articles">
   <img src="app/assets/images/home_page.png" alt="article home age" width="1000" height="400">
 </a>
 
 ## Articles Page
+
 <a href="https://github.com/jstloyal/TopLeague-articles">
   <img src="app/assets/images/category_page.png" alt="article home age" width="1000" height="400">
 </a>
 
 ## Article View Page
+
 <a href="https://github.com/jstloyal/TopLeague-articles">
   <img src="app/assets/images/article_view.png" alt="article home age" width="1000" height="400">
 </a>
 
 ## Create New Article Page
+
 <a href="https://github.com/jstloyal/TopLeague-articles">
-  <img src="app/assets/images/create_article.png" alt="article home age" width="1000" height="400">
+  <img src="app/assets/images/creat_article.png" alt="article home age" width="1000" height="400">
 </a>
 
 ## Login Page
+
 <a href="https://github.com/jstloyal/TopLeague-articles">
   <img src="app/assets/images/login_page.png" alt="article home age" width="1000" height="400">
 </a>
