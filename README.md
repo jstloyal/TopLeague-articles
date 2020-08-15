@@ -2,19 +2,7 @@
 
 toPEleague is a football blog app where you get to write articles on the top four leagues in Europe which are English Premier League, La Liga, Seria A, and Bundesliga. The home page shows all the articles and the top part of the page feature the article with the highest votes. Each article when clicked comprises a "read more" link as well as an option where users can upvote or downvote any article as they so wish.
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
 <br />
