@@ -2,8 +2,6 @@
 
 toPEleague is a football blog app where you get to write articles on the top four leagues in Europe which are English Premier League, La Liga, Seria A, and Bundesliga. The home page shows all the articles and the top part of the page feature the article with the highest votes. Each article when clicked comprises a "read more" link as well as an option where users can upvote or downvote any article as they so wish.
 
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -73,7 +71,7 @@ toPEleague is a football blog app where you get to write articles on the top fou
 
 ## Live Demo
 
-- [Live Demo](https://mighty-dusk-21959.herokuapp.com/)
+- [Live Demo](https://rocky-bastion-06402.herokuapp.com/)
 
 ## Built With
 
