@@ -1,8 +1,8 @@
 <div class="container-fluid">
-  <div class="row ">
-    <div class="container-fluid cat-index">
+  <div class="row main-row">
+    <div class="container-fluid cat-index1">
       <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'main-img1') %>
-      <div class="">
+      <div>
         <h5 id='current' class='main-left'><%= @liked_article.title ? @liked_article.title : '' %></h5>
         <p class= 'left-bottom-main'><%= truncate(@liked_article.text ? @liked_article.text : '', length: 80) %></p>
       </div>
@@ -11,7 +11,7 @@
 </div>
 
 <div class="my-portfolio">
-  <div class="container-fluid cat-index">
+  <div class="container-fluid cat-index1">
     <div class="row this-articles">
       <% Category.includes(:ordered_by_most_recent).each do |category| %>
         <% subcategories = category.ordered_by_most_recent.first %>

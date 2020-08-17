@@ -1,21 +1,9 @@
-@import 'bootstrap/dist/css/bootstrap';
+@import "bootstrap/dist/css/bootstrap";
 
 body {
   width: 100%;
-  margin: auto;
-}
-
-
-.navbar {
-  padding-left: 40px;
-  padding-right: 40px;
-  border-bottom: 3px solid #ED5E36;
-}
-
-.navbar-brand {
-  font-weight: bold;
-  letter-spacing: -1px;
-  padding-right: 100px;
+  margin: 0;
+  padding: 0;
 }
 
 .main-img {
@@ -29,8 +17,9 @@ body {
   object-fit: cover;
 }
 
-.cat-index {
-  padding: 0;
+.cat-index1 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 .main-left {
@@ -51,16 +40,20 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.article:nth-child(3), .article:nth-child(4), .article:nth-child(7), .article:nth-child(8) { direction: rtl; }
+.article:nth-child(3),
+.article:nth-child(4),
+.article:nth-child(7),
+.article:nth-child(8) {
+  direction: rtl;
+}
 
 .articles-img {
   width: 100%;
   height: 50vh;
-  // object-fit: cover;
 }
 
 .main-left a {
-  color: #ED5E36;
+  color: #ed5e36;
 }
 
 .the-articles,
@@ -73,8 +66,10 @@ body {
 
 .this-articles {
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .my-column {
@@ -149,7 +144,7 @@ body {
 }
 
 .text-link {
-  color: #ED5E36;
+  color: #ed5e36;
   font-weight: bold;
 }
 
@@ -187,77 +182,36 @@ body {
   bottom: 0;
   width: 100%;
   background-color: #4e443f;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   border-top: 50px;
 }
-
 
 #current {
   color: #fe6001;
 }
 
 .footer-flex {
-   display: flex;
-   padding: 1em;
-   width: 100%;
-   display:flex;
-   justify-content: space-between;
- }
+  display: flex;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
 
- .footer .row {
-   width: 100%;
- }
+.footer .row {
+  width: 100%;
+}
 
 ul {
   list-style-type: none;
 }
 
 .footer-flex li {
-  padding: .3em;
+  padding: 0.3em;
 }
 
 .fa {
   color: #fe6001;
   font-size: 1.2rem;
 }
-
-/* direct_uploads.css */
-
-// .direct-upload {
-//   display: inline-block;
-//   position: relative;
-//   padding: 2px 4px;
-//   margin: 0 3px 3px 0;
-//   border: 1px solid rgba(0, 0, 0, 0.3);
-//   border-radius: 3px;
-//   font-size: 11px;
-//   line-height: 13px;
-// }
-//
-// .direct-upload--pending {
-//   opacity: 0.6;
-// }
-//
-// .direct-upload__progress {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   opacity: 0.2;
-//   background: #0076ff;
-//   transition: width 120ms ease-out, opacity 60ms 60ms ease-in;
-//   transform: translate3d(0, 0, 0);
-// }
-//
-// .direct-upload--complete .direct-upload__progress {
-//   opacity: 0.4;
-// }
-//
-// .direct-upload--error {
-//   border-color: red;
-// }
-//
-// input[type=file][data-direct-upload-url][disabled] {
-//   display: none;
-// }
