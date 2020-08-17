@@ -4,13 +4,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @liked_article = Article.highest_vote.first
-    if @liked_article.exist?
-      flash[:notice] = 'Welcome to toPEleaGue'
-      redirect_to root_path
-    else
-      flash.now[:alert] = 'Register and create new article'
-      redirect_to login_path
-    end
+    redirect_to login_path if @liked_article.nil?
   end
 
   def new
