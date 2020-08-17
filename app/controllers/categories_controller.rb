@@ -4,7 +4,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @liked_article = Article.highest_vote.first
-    redirect_to login_path if @liked_article.nil?
+    redirect_to new_article_path if @liked_article.nil?
   end
 
   def new

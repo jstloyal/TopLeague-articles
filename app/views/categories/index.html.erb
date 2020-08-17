@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="row main-row">
     <div class="container-fluid cat-index1">
-      <%= image_tag(@liked_article.image ? @liked_article.image.url : '', class: 'main-img1') %>
+      <%= image_tag(the_image, class: 'main-img1') %>
       <div>
-        <h5 id='current' class='main-left'><%= @liked_article.title ? @liked_article.title : '' %></h5>
-        <p class= 'left-bottom-main'><%= truncate(@liked_article.text ? @liked_article.text : '', length: 80) %></p>
+        <h5 id='current' class='main-left'><%= the_title %></h5>
+        <p class= 'left-bottom-main'><%= truncate( the_text, length: 80) %></p>
       </div>
     </div>
   </div>
