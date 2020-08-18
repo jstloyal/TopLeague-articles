@@ -67,9 +67,9 @@ class UsersController < ApplicationController
   end
 
   def logged_in_redirect
-    if logged_in?
-      flash[:alert] = 'You are already logged in!'
-      redirect_to root_path
-    end
+    return unless logged_in?
+
+    flash[:alert] = 'You are already logged in!'
+    redirect_to root_path
   end
 end
