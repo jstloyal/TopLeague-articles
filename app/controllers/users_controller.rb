@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :require_same_user, only: %i[edit update show]
   before_action :require_admin, only: [:destroy]
   before_action :find_user, only: %i[edit update show]
+  before_action :logged_in_redirect, only: %i[new create]
 
   def new
     @user = User.new
@@ -63,5 +64,12 @@ class UsersController < ApplicationController
 
     flash[:danger] = 'Only admin can perform this action!'
     redirect_to root_path
+  end
+
+  def logged_in_redirect
+    if logged_in?
+      flash[:alert] = 'You are already logged in!'
+      redirect_to root_path
+    end
   end
 end
