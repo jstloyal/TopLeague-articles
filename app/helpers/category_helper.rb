@@ -22,4 +22,12 @@ module CategoryHelper
       redirect_to root_path
     end
   end
+
+  def main_cat(subcategories)
+    subcategories.present? ? subcategories.image.url : ''
+  end
+
+  def cat_test(subcategories)
+    subcategories.present? ? subcategories.title : ''
+  end
 end

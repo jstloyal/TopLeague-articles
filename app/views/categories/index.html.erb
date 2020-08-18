@@ -17,14 +17,14 @@
         <% subcategories = category.ordered_by_most_recent.first %>
         <div class="col-sm-3 down-column no-gutters">
           <div class="my-column">
-            <%= image_tag(subcategories.present? ? subcategories.image.url : '', class: 'my-column') %>
+            <%= image_tag(main_cat(subcategories), class: 'my-column') %>
           </div>
           <%= link_to category_path(category.id) do %>
             <div class="">
               <h5 class="left-top"><%= category.name %></h5>
             </div>
             <div class="">
-              <p class="left-bottom"><%= truncate(subcategories.present? ? subcategories.title : '', length: 30) %></p>
+              <p class="left-bottom"><%= truncate(cat_test(subcategories), length: 30) %></p>
             </div>
           <% end %>
         </div>
