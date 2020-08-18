@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'categories#index'
-  resources :articles do
+  resources :articles, except: [:destroy] do
     resources :votes
   end
 
@@ -11,8 +11,6 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
-
-  get 'home', to: 'home#index'
 
   resources :categories, except: [:destroy]
 end

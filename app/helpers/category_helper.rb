@@ -3,7 +3,7 @@ module CategoryHelper
     if @liked_article.image
       @liked_article.image.url
     else
-      redirect_to home_path
+      redirect_to root_path
     end
   end
 
@@ -11,7 +11,7 @@ module CategoryHelper
     if @liked_article.title
       @liked_article.title
     elsif nil?
-      redirect_to home_path
+      redirect_to root_path
     end
   end
 
@@ -19,7 +19,7 @@ module CategoryHelper
     if @liked_article.text
       @liked_article.text
     elsif nil?
-      redirect_to home_path
+      redirect_to root_path
     end
   end
 end
