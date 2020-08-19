@@ -1,0 +1,22 @@
+<div class="container-fluid article-body">
+    <div class='row justify-content-center'>
+      <div class='col-md-6'>
+        <div class='card-body form-body'>
+          <h2 class="text-link" align="center">Login</h2>
+          <%= form_for(:sessions, url: login_path) do |f| %>
+            <div class='form-group row justify-content-center'>
+              <div class="control-label col-sm-1">
+                <%= f.label :name, class: 'text-link' %>
+              </div>
+              <div class="col-sm-5">
+                <%= f.text_field :name, class: "form-control", placeholder: "Enter name", autofocus: true %>
+              </div>
+            </div>
+            <div class="form-group row justify-content-center">
+              <%= f.submit 'Login',  class: "btn btn-outline-dark btn-lg text-link" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>

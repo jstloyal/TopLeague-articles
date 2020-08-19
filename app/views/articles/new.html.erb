@@ -1,0 +1,48 @@
+<div class='container-fluid article-body'>
+    <div class='row justify-content-center'>
+      <div class='col-md-6'>
+        <div class="card-body">
+          <h5 class="text-link" align="center">Create new Article</h5>
+          <%= form_for @article do |f| %>
+            <div class="form-group row">
+              <div class="control-label col-sm-2">
+                <%= f.label :title, class: 'text-link' %>
+              </div>
+              <div class="col-lg-10">
+                <%= f.text_field :title, class: "form-control", placeholder: "Article title", autofocus: true %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="control-label col-sm-2">
+                <%= f.label :text, class: 'text-link' %>
+              </div>
+              <div class="col-10">
+                <%= f.text_area :text, rows: 10, class: "form-control", placeholder: "Enter article" %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="control-label col-sm-2">
+                <%= f.label :image, class: 'text-link' %>
+              </div>
+              <div class="col-lg-10">
+               <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="control-label col-sm-2">
+                <%= f.label :category, class: 'text-link' %>
+              </div>
+              <div class="col-lg-10">
+               <%= f.collection_select(:category_ids, Category.all, :id, :name,
+               { prompt: "Select a category" }, { multiple: true, size: 3, class: "custom-select shadow rounded"}) %>
+              </div>
+            </div>
+
+            <div class="form-group row justify-content-center">
+              <%= f.submit  class: "btn btn-outline-dark btn-lg text-link" %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+</div>

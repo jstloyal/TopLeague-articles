@@ -1,0 +1,34 @@
+<div class="container-fluid">
+  <div class="row main-row">
+    <div class="container-fluid cat-index1">
+      <%= image_tag(the_image, class: 'main-img1') %>
+      <div>
+        <h5 id='current' class='main-left'><%= the_title %></h5>
+        <p class= 'left-bottom-main'><%= truncate( the_text, length: 80) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="my-portfolio">
+  <div class="container-fluid cat-index1">
+    <div class="row this-articles">
+      <% Category.includes(:ordered_by_most_recent).each do |category| %>
+        <% subcategories = category.ordered_by_most_recent.first %>
+        <div class="col-sm-3 down-column no-gutters">
+          <div class="my-column">
+            <%= image_tag(main_cat(subcategories), class: 'my-column') %>
+          </div>
+          <%= link_to category_path(category.id) do %>
+            <div class="">
+              <h5 class="left-top"><%= category.name %></h5>
+            </div>
+            <div class="">
+              <p class="left-bottom"><%= truncate(cat_test(subcategories), length: 30) %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

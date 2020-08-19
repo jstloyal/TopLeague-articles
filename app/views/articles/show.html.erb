@@ -1,0 +1,12 @@
+<div class='container mt-2 article-show' align='center'>
+    <div class="img-article">
+      <%= image_tag @article.image.url, class: 'element-show image-art' %>
+    </div>
+    <h2 class='font-weight-bold text-center'><%= @article.title %></h2>
+    <p class='text-center neon font-weight-bold'><%= @article.text %></p>
+    <div align='center'>
+      <span class='font-weight-bold'>Author: <%=link_to @article.author.name, user_path(@article.author) %></span>
+      <span><%= pluralize(@article.votes.count, 'Vote') %></span>
+      <%= upvote_or_downvote_btn(@article) %>
+    </div>
+</div>

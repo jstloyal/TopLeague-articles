@@ -1,0 +1,217 @@
+@import "bootstrap/dist/css/bootstrap";
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-img {
+  min-height: 70vh;
+  background-image: url(premier.jpg);
+}
+
+.main-img1 {
+  height: 70vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cat-index1 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.main-left {
+  position: absolute;
+  top: 550px;
+  left: 20px;
+  font-weight: bold;
+}
+
+.element-show {
+  width: 90%;
+  height: 500px;
+}
+
+.articles,
+.article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.article:nth-child(3),
+.article:nth-child(4),
+.article:nth-child(7),
+.article:nth-child(8) {
+  direction: rtl;
+}
+
+.articles-img {
+  width: 100%;
+  height: 50vh;
+}
+
+.main-left a {
+  color: #ed5e36;
+}
+
+.the-articles,
+.this-articles,
+.articles,
+.article-show {
+  min-height: 250px;
+  margin-bottom: 60px;
+}
+
+.this-articles {
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.my-column {
+  height: 250px;
+  width: 100%;
+}
+
+.main-img,
+.first-col,
+.second-col,
+.third-col,
+.fourth-col {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.first-col {
+  background-image: url(laliga.jpg);
+}
+
+.second-col {
+  background-image: url(seria_a.jpg);
+}
+
+.third-col {
+  background-image: url(bundasliga.jpg);
+}
+
+.fourth-col {
+  background-image: url(others.gif);
+}
+
+.left-bottom-main {
+  position: absolute;
+  top: 580px;
+  left: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.left-top {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: underline;
+}
+
+.left-bottom {
+  position: absolute;
+  top: 200px;
+  left: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.left-bottom-main a,
+.left-top a,
+.left-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.down-column {
+  padding: 0 !important;
+  width: 100%;
+}
+
+.footer {
+  width: 100%;
+}
+
+.text-link {
+  color: #ed5e36;
+  font-weight: bold;
+}
+
+.article-body {
+  background-image: url(soccer.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 87vh;
+}
+
+.article-body1 {
+  // background-image: url(bundasliga.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  height: 87vh;
+  // -webkit-filter: grayscale(100%);
+  // filter: grayscale(100%);
+  background-color: #4e443f;
+  opacity: 50%;
+}
+
+.form-body {
+  padding-top: 150px;
+}
+
+.article-img {
+  object-fit: cover;
+  height: 60vh;
+  width: 840px;
+}
+
+#sticky-footer {
+  position: fixed;
+  height: 60px;
+  bottom: 0;
+  width: 100%;
+  background-color: #4e443f;
+  display: flex;
+  justify-content: space-between;
+  border-top: 50px;
+}
+
+#current {
+  color: #fe6001;
+}
+
+.footer-flex {
+  display: flex;
+  padding: 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .row {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.footer-flex li {
+  padding: 0.3em;
+}
+
+.fa {
+  color: #fe6001;
+  font-size: 1.2rem;
+}
